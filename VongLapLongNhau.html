@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CodeGym</title>
+</head>
+
+<body>
+<table id="idTable">
+
+</table>
+<script>
+
+    var htmlStr = "";
+    var idTable = document.getElementById("idTable");
+
+    // for (let i = 1; i <= 10; i++) {
+    //     htmlStr += "<tr>";
+    //     for (let j = 1; j <= 10; j++) {
+    //         htmlStr += "<td>" + i * j + "</td>" ;
+    //     }
+    //     htmlStr +=  "</tr>";
+    // }
+    // htmlStr +=  "</table>";
+    // idTable.innerHTML = htmlStr;
+
+    var i = 1;
+    var  j = 1;
+    while (i <= 10) {
+        htmlStr += "<tr>";
+        while (j <=10) {
+            htmlStr += "<td>" + i * j + "</td>" ;
+            j ++;
+        }
+        htmlStr +=  "</tr>";
+        j=1;
+        i++;
+    }
+    htmlStr +=  "</table>";
+    idTable.innerHTML = htmlStr;
+
+</script>
+<style>
+    td {
+        border: 2px solid black;
+    }
+    table {
+        text-align: center;
+        width: 500px;
+        border: 2px solid black;
+    }
+</style>
+</body>
+</html>
